@@ -1,0 +1,94 @@
+﻿
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - razor</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css"  />
+    <link rel="stylesheet" href="~/razor.styles.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-4">
+            <div class="container">
+                
+                <a class="navbar-brand" href="/Index">Razor</a>
+                  @{ 
+                    var date = DateTime.Now;
+                    
+                }
+                <!--ToShortDateString för att ta bort klockslaget-->
+                <p class="datetext">Dagens datum är: @date.ToShortDateString()</p>
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="navlink" href="/Index">Start</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navlink" href="/Razor">Razor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navlink" href="/About">Om Sidan</a>
+                        </li>
+                    </ul>
+                     
+                </div>
+             </div>
+             
+        </nav>
+    </header>
+    <div class="bodycontainer">
+    <div class="side">
+        <h2>Huvudmeny</h2>
+        <aside class="sidebar">
+            
+           <div class="sidebarcontainer">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="sidebar-item">
+                            <a class="nav-link " href="/Index">Start</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="nav-link " href="/Razor">Razor</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="nav-link" href="/About">Om Sidan</a>
+                        </li>
+                    </ul>
+                </div>
+               
+            </div>
+        </aside>
+    </div>
+    <div class="maincontainer">
+        <main class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+           <p>Av: Sofia Dahlberg <br>- Kontakta mig via e-post: <a href="soda2200@student.miun.se">soda2200@student.miun.se</a></p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="../site.js"></script>
+</body>
+</html>

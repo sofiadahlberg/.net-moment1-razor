@@ -1,0 +1,262 @@
+html {
+  font-size: 14px;
+}
+
+.bold-text{
+  font-weight: bold;
+}
+
+body{
+  
+  background-color:#f0f8ff;
+}
+
+.side, header{
+  background-color:#f7f6ee;
+ 
+}
+
+
+h2{
+  padding: 1%;
+}
+
+.sidebar-item{
+  color: #ffffff;
+}
+.nav-link:hover{
+  text-decoration: underline;
+}
+.collapsiblediv {
+  display: none; /* Initially hide content */
+}
+
+.collapsible-btn.active + .content {
+  display: block; /* Show content when button is active */
+}
+
+.collapsible{
+  padding: 2%;
+  font-family:Arial, Helvetica, sans-serif;
+  border: #000000 1px solid;
+  box-shadow: 3px 2px 7px black;
+ 
+}
+
+.collapsible:hover{
+  background-color:#444344;
+color: #ffffff;
+}
+
+.collapsiblediv{
+  margin: 5%;
+}
+.navlink{
+  color: #000000;
+  text-decoration: none;
+}
+.navlink:hover{
+  color: #000000;
+  text-decoration: underline;
+}
+.nav-item{
+  padding: 2%;
+}
+/* Div på Razor-undersidan*/
+.main-information{
+padding: 3%;
+}
+.main-information li{
+  padding: 1%;
+}
+
+@media only screen and (max-width: 575px) {
+  html {
+    font-size: 16px;
+  }
+
+  .sidebar, .side {
+    display: none;
+    border: none;
+  }
+
+  .collapsible{
+    margin-left: 15%;
+    padding: 2%;
+    font-family:Arial, Helvetica, sans-serif;
+    width: 70%;
+  }
+  .maincontainer {
+   
+    border:#000000 1px solid;
+     width: 90%;
+     margin: 90px 30px;
+     
+   }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1000px) {
+  .navbar {
+    padding: 2%;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .bodycontainer {
+    width: 100%;
+    padding: 2%;
+    display: inline-flex;
+  }
+
+  /*Aside med menyn till vänster*/
+  .side {
+    width: 29%;
+    max-width: 40%;
+    margin: 10px;
+    display: flex;
+    border: #000000 1px solid;
+    
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 80%;
+    padding: 1px;
+    margin: 4%;
+
+  }
+
+  .nav-link {
+    border: #000000 1px solid;
+    color: #000000;
+    font-size: 18px;
+    padding: 10% 6%;
+    
+    text-align: center; /* Center text horizontally */
+    margin-top: 19%;
+  }
+  
+  .nav-link:hover{
+    background-color: #575757;
+    color: #ffffff;
+    border: #ffffff 1px solid;
+    text-decoration: underline;
+  }
+
+  .maincontainer {
+   
+   border:#000000 1px solid;
+    width: 60%;
+    margin: 10px 30px;
+    padding: 0%;
+  }
+  
+  .container .datetext {
+    margin-left: 52%;
+  }
+
+  .collapsible{
+    margin-left: 25%;
+    padding: 2%;
+    font-family:Arial, Helvetica, sans-serif;
+    width: 50%;
+  }
+  
+}
+
+@media only screen and (min-width: 1001px) {
+  .navbar {
+    padding: 2%;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .bodycontainer {
+    max-width: 1200px;
+    width: 100%;
+    padding: 2%;
+    display: inline-flex;
+  }
+
+  /*Aside med menyn till vänster*/
+  .side {
+    width: 19%;
+    margin: 10px;
+    display: flex;
+    border: #000000 1px solid;
+    
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 110%;
+    padding: 20px;
+   
+    margin: 4%;
+
+  }
+
+  .nav-link {
+    border: #000000 1px solid;
+    color: #000000;
+    font-size: 18px;
+    padding: 10% 6%;
+    width: 125%;
+    text-align: center; /* Center text horizontally */
+    margin: 4%;
+  }
+  
+
+  .nav-link:hover{
+    background-color: #575757;
+    color: #ffffff;
+  }
+
+  .maincontainer {
+    
+   border:#000000 1px solid;
+    width: 70%;
+    margin: 10px 50px;
+    padding: 1%;
+  }
+
+  /* Datumtexten i headern*/
+  .container .datetext {
+    margin-left: 62%;
+  }
+  .collapsible{
+    margin-left: 25%;
+    padding: 2%;
+    font-family:Arial, Helvetica, sans-serif;
+    width: 50%;
+  }
+  .collapsiblediv{
+    margin-left: 25%;
+  }
+}
+
+
+
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
